@@ -1,0 +1,8 @@
+.vscode
+dist
+build
+*.egg-info
+venv
+
+*.pyc
+secret.key
