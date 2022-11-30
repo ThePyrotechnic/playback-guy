@@ -1,13 +1,19 @@
 include make.env
 
-.PHONY: clean playback_guy
+.PHONY: clean playback_guy docker
 
-playback_guy: dist/playback_guy-$(Version)-py3-none-any.whl
+Wheel=playback_guy-$(Version)-py3-none-any.whl
 
-dist/playback_guy-$(Version)-py3-none-any.whl:
+playback_guy: dist/$(Wheel)
+
+dist/$(Wheel):
 
 	VERSION=$(Version) python -m build
 	pip install $@
+
+docker: playback_guy
+	sudo docker build . -t thepyrotechnic/playback-guy:$(Version) --build-arg VERSION=$(Version) --build-arg WHEEL=$(Wheel)
+
 
 clean:
 	-rm dist/*
