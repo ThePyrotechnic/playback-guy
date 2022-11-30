@@ -14,7 +14,6 @@ dist/$(Wheel):
 docker: playback_guy
 	sudo docker build . -t thepyrotechnic/playback-guy:$(Version) --build-arg VERSION=$(Version) --build-arg WHEEL=$(Wheel)
 
-
 clean:
 	-rm dist/*
 	pip uninstall --yes playback_guy
