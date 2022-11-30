@@ -19,7 +19,7 @@ playback-guy - Play URLs in Discord
 - rust/cargo (required to build songbird-py)
 - ffmpeg
 - opus
-- youtube-dl (can be pip installed - not included in package dependencies in case user wants to use different version)
+- youtube-dl (can be pip installed - not included in package dependencies in case the user wants to use a different version)
 
 See the Dockerfile for build instructions
 
