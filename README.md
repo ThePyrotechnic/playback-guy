@@ -13,3 +13,13 @@ playback-guy - Play URLs in Discord
 
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
+
+## Dependencies
+
+- rust/cargo (required to build songbird-py)
+- ffmpeg
+- opus
+- youtube-dl (can be pip installed - not included in package dependencies in case user wants to use different version)
+
+See the Dockerfile for build instructions
+
