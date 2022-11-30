@@ -14,6 +14,10 @@ playback-guy - Play URLs in Discord
     You should have received a copy of the GNU Affero General Public License
     along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
+## Setup
+
+The bot expects a `secret.key` file with the bot's secret key to be in the directory that the script is launched from
+
 ## Dependencies
 
 - rust/cargo (required to build songbird-py)
