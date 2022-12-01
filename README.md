@@ -27,3 +27,6 @@ The bot expects a `secret.key` file with the bot's secret key to be in the direc
 
 See the Dockerfile for build instructions
 
+## Running in Docker
+
+`docker run --mount type=bind,source=secret.key,target=/secret.key thepyrotechnic/playback-guy:<version>`

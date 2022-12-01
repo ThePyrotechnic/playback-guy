@@ -25,7 +25,6 @@ RUN apk update; apk add \
     ffmpeg opus
 
 COPY --from=build /venv venv
-COPY secret.key secret.key
 
 ENV PATH=/venv/bin:$PATH
 
