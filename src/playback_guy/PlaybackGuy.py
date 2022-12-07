@@ -53,7 +53,12 @@ async def _event(event: hikari.GuildMessageCreateEvent) -> None:
             return
 
         if _track_handle is not None:
-            _track_handle.stop()
+            try:
+                _track_handle.stop()
+            except Exception as e:
+                # I have no idea where to import this exception from
+                if e.__class__ == "module.TrackError":
+                    pass
 
         is_disconnected = _voice is None or bot_voice_state is None
         is_same_channel = (

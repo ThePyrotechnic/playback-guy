@@ -18,7 +18,11 @@ playback-guy - Play back URLs in Discord
 import sys
 
 
-if __name__ == "__main__":
+def main():
     from .cli import playback_guy
 
     sys.exit(playback_guy())
+
+
+if __name__ == "__main__":
+    main()
